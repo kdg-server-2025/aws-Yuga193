@@ -17,10 +17,10 @@ resource "aws_budgets_budget" "kdg_all" {
   time_period_start = "2023-01-01_00:00"
 
   notification {
-    comparison_operator         = "GREATER_THAN"
-    threshold                   = 100
-    threshold_type              = "PERCENTAGE"
-    notification_type           = "ACTUAL"
-    subscriber_sns_topic_arns  = [aws_sns_topic.budget_alert.arn]
+    comparison_operator       = "GREATER_THAN"
+    threshold                 = 100
+    threshold_type            = "PERCENTAGE"
+    notification_type         = "ACTUAL"
+    subscriber_sns_topic_arns = [aws_sns_topic.budget_alert.arn]
   }
 }
